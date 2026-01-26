@@ -1,0 +1,13 @@
+id: order_fulfillment
+version: v1
+start: charge_card
+steps:
+  charge_card:
+    type: task
+    next: reserve_inventory
+  reserve_inventory:
+    type: task
+    next: ship_order
+  ship_order:
+    type: task
+    end: true

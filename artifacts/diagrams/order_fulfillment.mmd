@@ -1,0 +1,6 @@
+flowchart TD
+charge_card([charge_card:task])
+charge_card --> reserve_inventory
+reserve_inventory([reserve_inventory:task])
+reserve_inventory --> ship_order
+ship_order([ship_order:task])

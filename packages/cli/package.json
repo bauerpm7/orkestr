@@ -1,0 +1,23 @@
+{
+  "name": "@orkestr/cli",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "orkestr": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo 'no CLI tests yet'"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "yaml": "^2.5.0",
+    "@orkestr/core": "^0.1.0",
+    "@orkestr/targets-temporal": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.11.17"
+  }
+}
