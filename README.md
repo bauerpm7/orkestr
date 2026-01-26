@@ -1,5 +1,7 @@
 # Orkestr Monorepo
 
+[![CI](https://github.com/bauerpm7/orkestr/actions/workflows/ci.yml/badge.svg)](https://github.com/bauerpm7/orkestr/actions/workflows/ci.yml)
+
 TypeScript workspaces for core tooling, CLI, diagram generation, and engine targets (Temporal first).
 
 ## Packages
