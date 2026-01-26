@@ -9,4 +9,14 @@ module.exports = {
     '^@orkestr/diagrams(.*)$': '<rootDir>/packages/diagrams/src$1',
     '^@orkestr/targets-temporal(.*)$': '<rootDir>/packages/targets/temporal/src$1',
   },
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 40,
+      functions: 50,
+      lines: 50,
+      statements: 50,
+    },
+  },
 };

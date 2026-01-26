@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo 'no CLI tests yet'",
+    "pretest": "pnpm -w run build",
+    "test": "jest -c ../../jest.config.cjs --roots packages/cli",
     "lint": "eslint -c ../../eslint.config.js \"src/**/*.ts\""
   },
   "dependencies": {
