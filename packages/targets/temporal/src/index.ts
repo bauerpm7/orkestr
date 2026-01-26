@@ -3,10 +3,7 @@ import path from 'path';
 
 interface IR {
   id: string;
-  nodes: Record<
-    string,
-    { id: string; type: string; next?: string; end?: boolean }
-  >;
+  nodes: Record<string, { id: string; type: string; next?: string; end?: boolean }>;
 }
 
 export function generateTemporalArtifacts(ir: IR, outDir: string) {

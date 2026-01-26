@@ -1,0 +1,12 @@
+# Generated and build outputs
+node_modules/
+dist/
+coverage/
+artifacts/
+generated/
+
+# Compiled test artifacts
+packages/**/__tests__/*.js
+
+# Lockfiles
+pnpm-lock.yaml

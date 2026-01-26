@@ -20,9 +20,5 @@ test('parse, IR, validate, simulate', () => {
   const diags = validateIR(ir);
   expect(diags.find((d) => d.severity === 'error')).toBeUndefined();
   const trace = simulate(ir);
-  expect(trace.path).toEqual([
-    'charge_card',
-    'reserve_inventory',
-    'ship_order',
-  ]);
+  expect(trace.path).toEqual(['charge_card', 'reserve_inventory', 'ship_order']);
 });

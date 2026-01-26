@@ -91,7 +91,7 @@ It is designed to:
 - prioritize readability and reviewability
 - serve as the primary interface for developers
 
-The spec describes *what should happen* in a workflow, without prescribing *how a specific engine must implement it*.
+The spec describes _what should happen_ in a workflow, without prescribing _how a specific engine must implement it_.
 
 ---
 
@@ -365,12 +365,10 @@ This ensures that:
 By providing validation and testing at the workflow level, Orkestr shifts correctness from:
 
 > “Hope the engine catches this at runtime”
-> 
-> 
+>
 > to
-> 
+>
 > “Prove the workflow is correct before deployment”
-> 
 
 This dramatically reduces production risk, shortens feedback loops, and improves confidence when evolving complex distributed systems.
 

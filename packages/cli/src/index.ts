@@ -12,9 +12,7 @@ program.name('orkestr').description('Orkestr CLI').version('0.1.0');
 function loadSpec(file: string) {
   const text = fs.readFileSync(file, 'utf8');
   const data =
-    file.endsWith('.yaml') || file.endsWith('.yml')
-      ? YAML.parse(text)
-      : JSON.parse(text);
+    file.endsWith('.yaml') || file.endsWith('.yml') ? YAML.parse(text) : JSON.parse(text);
   return parseSpec(data);
 }
 

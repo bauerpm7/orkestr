@@ -1,14 +1,6 @@
 import { z } from 'zod';
 
-export const StepType = z.enum([
-  'task',
-  'choice',
-  'parallel',
-  'map',
-  'wait',
-  'end',
-  'fail',
-]);
+export const StepType = z.enum(['task', 'choice', 'parallel', 'map', 'wait', 'end', 'fail']);
 
 export const StepSchema = z.object({
   type: StepType,

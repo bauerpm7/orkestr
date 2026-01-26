@@ -1,13 +1,6 @@
 import type { OrkestrSpec } from './spec';
 
-export type IRNodeType =
-  | 'task'
-  | 'choice'
-  | 'parallel'
-  | 'map'
-  | 'wait'
-  | 'end'
-  | 'fail';
+export type IRNodeType = 'task' | 'choice' | 'parallel' | 'map' | 'wait' | 'end' | 'fail';
 
 export interface IRNode {
   id: string;

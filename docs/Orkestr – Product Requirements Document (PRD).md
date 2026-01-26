@@ -147,13 +147,13 @@ As a team, I want to reduce coupling to a single orchestration platform without 
 
 ### Existing Alternatives
 
-| Tool | Limitation |
-| --- | --- |
-| Temporal | Engine-specific, no unified tooling layer |
-| Step Functions | Platform-locked, limited local testing |
-| Argo | Kubernetes-bound, complex UX |
-| BPMN tools | Modeling-focused, weak CI integration |
-| Code generators | No validation/testing layer |
+| Tool            | Limitation                                |
+| --------------- | ----------------------------------------- |
+| Temporal        | Engine-specific, no unified tooling layer |
+| Step Functions  | Platform-locked, limited local testing    |
+| Argo            | Kubernetes-bound, complex UX              |
+| BPMN tools      | Modeling-focused, weak CI integration     |
+| Code generators | No validation/testing layer               |
 
 ### Orkestr’s Differentiation
 
@@ -167,13 +167,13 @@ As a team, I want to reduce coupling to a single orchestration platform without 
 
 ## 9. Risks & Mitigations
 
-| Risk | Mitigation |
-| --- | --- |
-| Scope creep | Strict non-goals |
-| Engine feature gaps | Clear diagnostics |
-| Low adoption | Focus on Temporal first |
-| Over-abstraction | Keep spec minimal |
-| Maintenance burden | No runtime, isolated targets |
+| Risk                | Mitigation                   |
+| ------------------- | ---------------------------- |
+| Scope creep         | Strict non-goals             |
+| Engine feature gaps | Clear diagnostics            |
+| Low adoption        | Focus on Temporal first      |
+| Over-abstraction    | Keep spec minimal            |
+| Maintenance burden  | No runtime, isolated targets |
 
 ---
 
