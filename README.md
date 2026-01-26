@@ -48,3 +48,34 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for release history and notes.
+
+## Release & Versioning
+
+- Releases are triggered by Git tags (e.g., `v0.1.2`) via [.github/workflows/release.yml](.github/workflows/release.yml).
+- Automated versioning and release PRs are handled by Changesets:
+  - Action: [.github/workflows/changesets.yml](.github/workflows/changesets.yml)
+  - Config: [.changeset/config.json](.changeset/config.json)
+
+Workflow:
+
+- For feature/fix branches, add a changeset locally:
+  ```bash
+  pnpm changeset
+  # Select packages and bump types (patch/minor/major)
+  # Commit the generated .changeset/<slug>.md file
+  ```
+- Push and open a PR; the Changesets Action will create/maintain a “Version Packages” PR.
+- When the release PR is merged, tags are created automatically (no npm publish yet).
+
+Sample changeset file (committed under `.changeset/`):
+
+```markdown
+---
+'@orkestr/core': minor
+'@orkestr/cli': minor
+'@orkestr/diagrams': patch
+'@orkestr/targets-temporal': patch
+---
+
+Add TDD policy and CLI tests; improve Temporal generator.
+```
