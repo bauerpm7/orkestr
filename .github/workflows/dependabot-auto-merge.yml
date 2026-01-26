@@ -1,0 +1,29 @@
+name: Dependabot Auto Merge
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+  check_suite:
+    types: [completed]
+  status: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge and merge when checks pass
+        uses: ahmadnassri/action-dependabot-auto-merge@v3
+        with:
+          # Fine-grained PAT with Contents & Pull requests RW on this repo
+          github-token: ${{ secrets.DEPENDABOT_AUTOMERGE_TOKEN }}
+          # Merge method can be squash to keep history clean
+          merge-method: squash
+          # Only auto-merge patch/minor by default; adjust if desired
+          target: minor
+          # Require all required checks to be successful
+          # Default behavior respects branch protection rules
