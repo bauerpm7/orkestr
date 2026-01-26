@@ -33,7 +33,6 @@ jobs:
       - name: Create release PR / tag
         uses: changesets/action@v1
         with:
-          token: ${{ secrets.CHANGESETS_TOKEN }}
           publish: pnpm changeset tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CHANGESETS_TOKEN }}
