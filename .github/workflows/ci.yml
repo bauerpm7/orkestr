@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Activate pnpm
+        run: corepack prepare pnpm@9.0.0 --activate
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm -r run build
+
+      - name: Run tests
+        run: pnpm -r run test
+
+      - name: Validate example workflows
+        run: node packages/cli/dist/index.js validate examples/workflows/order_fulfillment.yaml
+
+      - name: Generate diagrams
+        run: node packages/cli/dist/index.js diagram examples/workflows/order_fulfillment.yaml --out artifacts/diagrams
+
+      - name: Generate Temporal artifacts
+        run: node packages/cli/dist/index.js build examples/workflows/order_fulfillment.yaml --target temporal --out generated
+
+      - name: Upload generated artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: orkestr-generated
+          path: |
+            artifacts/diagrams
+            generated
