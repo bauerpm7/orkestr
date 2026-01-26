@@ -44,3 +44,7 @@ We follow a community Code of Conduct. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history and notes.
