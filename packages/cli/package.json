@@ -13,8 +13,8 @@
   "dependencies": {
     "commander": "^12.1.0",
     "yaml": "^2.5.0",
-    "@orkestr/core": "^0.1.0",
-    "@orkestr/targets-temporal": "^0.1.0"
+    "@orkestr/core": "workspace:*",
+    "@orkestr/targets-temporal": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
