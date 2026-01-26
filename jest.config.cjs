@@ -6,5 +6,7 @@ module.exports = {
   testPathIgnorePatterns: ['/dist/'],
   moduleNameMapper: {
     '^@orkestr/core(.*)$': '<rootDir>/packages/core/src$1',
+    '^@orkestr/diagrams(.*)$': '<rootDir>/packages/diagrams/src$1',
+    '^@orkestr/targets-temporal(.*)$': '<rootDir>/packages/targets/temporal/src$1',
   },
 };

@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo 'no diagram tests yet'",
+    "test": "jest -c ../../jest.config.cjs --roots packages/diagrams",
     "lint": "eslint -c ../../eslint.config.js \"src/**/*.ts\""
   },
   "devDependencies": {

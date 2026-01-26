@@ -15,6 +15,14 @@ Scope: V1 foundation only. Focus on Spec + IR, validation, deterministic simulat
 - Explicit control flow; predictable behavior; fast feedback.
 - Additive evolution: versioned spec, minimal breaking changes.
 
+## Test-Driven Development (TDD)
+
+- Write failing unit tests first for new behavior, then implement the minimum code to pass.
+- Cover core transformations (`parseSpec()`, `toIR()`, `validateIR()`, `simulate()`) with focused tests.
+- Add artifact generation tests (e.g., Temporal) that verify files and machine-readable diagnostics.
+- Prefer deterministic, pure functions; use snapshots only where representation stability is intended.
+- CI gates must run `build`, `test`, `lint`, and `format:check` and fail on test changes without explicit `--update` when snapshots are introduced.
+
 ## Source of Truth
 
 - The PRD and Technical Design Architecture Spec are the authoritative source of truth for scope, requirements, and implementation details.
