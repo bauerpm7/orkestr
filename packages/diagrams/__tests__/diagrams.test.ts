@@ -1,4 +1,4 @@
-import { irToMermaid } from '@orkestr/diagrams';
+import { irToMermaid } from '../src';
 
 describe('diagrams.irToMermaid', () => {
   const ir = {
