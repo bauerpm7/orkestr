@@ -5,7 +5,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo 'no target tests yet'"
+    "test": "echo 'no target tests yet'",
+    "lint": "eslint -c ../../../eslint.config.js \"src/**/*.ts\""
   },
   "dependencies": {},
   "devDependencies": {

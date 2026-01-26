@@ -5,7 +5,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "jest -c ../../jest.config.cjs --roots packages/core"
+    "test": "jest -c ../../jest.config.cjs --roots packages/core",
+    "lint": "eslint -c ../../eslint.config.js \"src/**/*.ts\""
   },
   "dependencies": {
     "yaml": "^2.5.0",

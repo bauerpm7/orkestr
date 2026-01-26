@@ -5,7 +5,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo 'no diagram tests yet'"
+    "test": "echo 'no diagram tests yet'",
+    "lint": "eslint -c ../../eslint.config.js \"src/**/*.ts\""
   },
   "devDependencies": {
     "typescript": "^5.6.3"
