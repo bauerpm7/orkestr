@@ -17,7 +17,8 @@ export interface IRGraph {
 
 export function toIR(spec: OrkestrSpec): IRGraph {
   const nodes: Record<string, IRNode> = {};
-  for (const [id, step] of Object.entries(spec.steps)) {
+  for (const id of Object.keys(spec.steps)) {
+    const step = spec.steps[id];
     nodes[id] = {
       id,
       type: step.type as IRNodeType,

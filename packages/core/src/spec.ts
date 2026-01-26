@@ -13,7 +13,7 @@ export const SpecSchema = z.object({
   id: z.string(),
   version: z.string().default('v1'),
   start: z.string(),
-  steps: z.record(StepSchema),
+  steps: z.record(z.string(), StepSchema),
 });
 
 export type OrkestrSpec = z.infer<typeof SpecSchema>;
